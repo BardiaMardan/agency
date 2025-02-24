@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 'use client'
 
 import { ContactUs } from '@/actions/content.actions'
@@ -17,7 +19,7 @@ const Contact = () => {
     setIsLoading(true)
     setError(null)
     
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
     try {
       const formData = new FormData(event.currentTarget)
 
