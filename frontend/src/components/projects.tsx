@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { Project } from '@/types/project.types'
 import { BsEye } from 'react-icons/bs'
+import Image from 'next/image';
 
 type ProjectsProps = {
   projects: Project[]
@@ -23,7 +24,13 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-primary/50 backdrop-blur-lg rounded-lg overflow-hidden"
             >
-              <img src={project.thumbnail} alt={project.title} className="w-full h-48 object-cover" />
+              <Image 
+                src={project.thumbnail} 
+                alt={project.title} 
+                width={500}  
+                height={192}
+                className="object-cover" 
+              />
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-secondary mb-2">{project.title}</h3>
                 <p className="text-text-primary mb-4">{project.description}</p>

@@ -6,6 +6,8 @@ import React, { FormEvent, useState } from 'react'
 import { BiLoaderCircle } from 'react-icons/bi'
 import Swal from 'sweetalert2'
 
+
+
 const Contact = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
@@ -14,7 +16,8 @@ const Contact = () => {
     event.preventDefault()
     setIsLoading(true)
     setError(null)
-
+    
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     try {
       const formData = new FormData(event.currentTarget)
 
