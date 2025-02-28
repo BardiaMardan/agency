@@ -2,11 +2,11 @@
 
 import { unstable_cache } from 'next/cache'
 
-const API_BASE_URL = process.env.API_URL
+const API_URL = process.env.API_URL
 
 export const getFAQ = unstable_cache(
     async () => {
-        const response = await fetch(`${API_BASE_URL}site/FAQ`, {
+        const response = await fetch(`${API_URL}site/FAQ`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -23,7 +23,7 @@ export const getFAQ = unstable_cache(
 
 export const getSettings = unstable_cache(
     async () => {
-        const response = await fetch(`${API_BASE_URL}site/settings/`, {
+        const response = await fetch(`${API_URL}site/settings/`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -39,7 +39,7 @@ export const getSettings = unstable_cache(
 )
 
 export const ContactUs = async (fullName: string, email: string, title: string, message: string) => {
-    const response = await fetch(`${API_BASE_URL}site/contact-us/`, {
+    const response = await fetch(`${API_URL}site/contact-us/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

@@ -1,9 +1,9 @@
 'use server'
 
-const API_BASE_URL = process.env.API_URL
+const API_URL = process.env.API_URL
 
 export const getServices = async () => {
-    const response = await fetch(`${API_BASE_URL}services/`, {
+    const response = await fetch(`${API_URL}services/`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -16,7 +16,7 @@ export const getServices = async () => {
 }
 
 export const getProjects = async () => {
-    const response = await fetch(`${API_BASE_URL}projects/`, {
+    const response = await fetch(`${API_URL}projects/`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -29,7 +29,7 @@ export const getProjects = async () => {
 }
 
 export const getService = async (slug: string) => {
-    const response = await fetch(`${API_BASE_URL}service/${slug}`, {
+    const response = await fetch(`${API_URL}service/${slug}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
