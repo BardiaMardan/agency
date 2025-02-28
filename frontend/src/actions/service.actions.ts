@@ -9,6 +9,7 @@ export const getServices = async () => {
             "Content-Type": "application/json"
         }
     })
+    console.log(`${API_URL}services/`)
     if (!response.ok) {
         throw new Error(response.statusText);
     }
@@ -22,6 +23,7 @@ export const getProjects = async () => {
             "Content-Type": "application/json"
         }
     })
+    console.log(`${API_URL}projects/`)
     if (!response.ok) {
         throw new Error(response.statusText);
     }
@@ -35,6 +37,7 @@ export const getService = async (slug: string) => {
             "Content-Type": "application/json"
         }
     })
+    console.log(`${API_URL}service/${slug}`)
     if (!response.ok) {
         throw new Error(response.statusText);
     }
