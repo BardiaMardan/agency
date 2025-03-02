@@ -2,7 +2,7 @@
 
 import { unstable_cache } from 'next/cache'
 
-const API_URL = process.env.API_URL
+// const API_URL = process.env.API_URL
 
 export const getFAQ = unstable_cache(
     async () => {

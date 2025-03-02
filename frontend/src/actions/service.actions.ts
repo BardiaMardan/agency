@@ -1,6 +1,6 @@
 'use server'
 
-const API_URL = process.env.API_URL
+// const API_URL = process.env.API_URL
 
 export const getServices = async () => {
     const response = await fetch(`${process.env.API_URL}services/`, {
