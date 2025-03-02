@@ -3,13 +3,13 @@
 const API_URL = process.env.API_URL
 
 export const getServices = async () => {
-    const response = await fetch(`${API_URL}services/`, {
+    const response = await fetch(`${process.env.API_URL}services/`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
         }
     })
-    console.log(`${API_URL}services/`)
+    console.log(`${process.env.API_URL}services/`)
     if (!response.ok) {
         throw new Error(response.statusText);
     }
@@ -17,13 +17,13 @@ export const getServices = async () => {
 }
 
 export const getProjects = async () => {
-    const response = await fetch(`${API_URL}projects/`, {
+    const response = await fetch(`${process.env.API_URL}projects/`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
         }
     })
-    console.log(`${API_URL}projects/`)
+    console.log(`${process.env.API_URL}projects/`)
     if (!response.ok) {
         throw new Error(response.statusText);
     }
@@ -31,13 +31,13 @@ export const getProjects = async () => {
 }
 
 export const getService = async (slug: string) => {
-    const response = await fetch(`${API_URL}service/${slug}`, {
+    const response = await fetch(`${process.env.API_URL}service/${slug}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
         }
     })
-    console.log(`${API_URL}service/${slug}`)
+    console.log(`${process.env.API_URL}service/${slug}`)
     if (!response.ok) {
         throw new Error(response.statusText);
     }
